@@ -1,0 +1,146 @@
+.photography-container {
+  padding: 20px 20px;
+  background-color: white;
+  .masonry {
+    transition: all .5s ease-in-out;
+    column-gap: 30px;
+    column-fill: initial;
+    //column-gap: 50px;
+
+    .brick {
+      margin-bottom: 30px;
+      display: inline-block; /* Fix the misalignment of items */
+      vertical-align: top; /* Keep the item on the very top */
+      box-sizing: inherit;
+      //overflow: hidden;
+
+      img {
+        transition: all .5s ease-in-out;
+        backface-visibility: hidden; /* Remove Image flickering on hover */
+        max-width:100%;
+        vertical-align: middle;
+        border-radius: 20px;
+        //width: 400px;
+        //height: auto;
+
+        &:hover {
+          opacity: .75;
+        }
+      }
+      .description {
+        position: relative;
+        bottom: 60px;
+        left: 0;
+        z-index: 1;     
+        margin-bottom: -40px;
+        visibility: hidden;
+        background-color: #F1C9D2;      
+        transition: .2s ease-in-out;
+        width: 70%;
+        text-align: center;
+        opacity: 0;
+
+        .year {
+          color: gray;
+          font-family: 'Source Sans Pro';
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+        .place {
+          font-size: 14px;
+          font-family: 'Source Sans Pro';
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+      &:hover {
+        .description {
+          visibility: visible;
+          opacity: 1;
+
+        }
+        
+    }
+    }
+  }
+
+/* Small screens */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .masonry {
+    transition: all .5s ease-in-out;
+    column-gap: 30px;
+    column-fill: initial;
+    //column-gap: 50px;
+
+    .brick {
+      margin-bottom: 30px;
+      display: inline-block; /* Fix the misalignment of items */
+      vertical-align: top; /* Keep the item on the very top */
+      box-sizing: inherit;
+      //overflow: hidden;
+
+      img {
+        transition: all .5s ease-in-out;
+        backface-visibility: hidden; /* Remove Image flickering on hover */
+        max-width:100%;
+        vertical-align: middle;
+        border-radius: 20px 20px 0 0;
+        //width: 400px;
+        //height: auto;
+
+        &:hover {
+          opacity: .75;
+        }
+      }
+      .description {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        z-index: 1;     
+        margin-bottom: 0px;
+        visibility: visible;
+        background-color: #FFF;      
+        transition: .2s ease-in-out;
+        width: 100%;
+        text-align: center;
+        opacity: 1;
+        border-radius: 0 0 20px 20px;
+        padding: 0 0 15px 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        .year {
+          color: gray;
+          font-family: 'Source Sans Pro';
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+        .place {
+          font-size: 14px;
+          font-family: 'Source Sans Pro';
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+}
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+  .desc {
+    font-size: 1.25em;
+  }
+
+  .intro {
+    letter-spacing: 1px;
+  }
+
+  .masonry {
+    column-count: 3;
+  }
+}
+
+  }

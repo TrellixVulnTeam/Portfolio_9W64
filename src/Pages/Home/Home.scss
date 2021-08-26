@@ -1,0 +1,313 @@
+* {
+    .container-home {
+        overflow-x: hidden;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 5fr 1fr;
+        grid-template-areas: "astronaut text"
+                            ". footer";
+        .text {
+            //border: 1px black solid;
+            grid-area: text;
+        
+            display: grid;
+        
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-areas: "welcome" "name" "descriptors";
+        
+            .welcome {
+                //border: 1px black solid;
+                grid-area: welcome;
+        
+                justify-self: center;
+                align-self: end;
+        
+                font-size: 40px;
+            }
+        
+            .name  {
+                //border: 1px black solid;
+                grid-area: name;
+        
+                justify-self: center;
+                align-self: center;
+
+                .name-img {
+                    width: 30vw;
+                    padding: 20px;
+                }
+            }
+        
+            .descriptors {
+                //border: 1px black solid;
+                grid-area: descriptors;
+        
+                justify-self: center;
+                align-self: start;
+                
+                font-size: 24px;
+            }
+        
+        
+        }
+    
+        .astronaut {
+            //border: 1px black solid;
+            grid-area: astronaut;
+
+            justify-self: end;
+
+            .astro-img {
+                position: absolute;
+                left: 5vw;
+                top: 5vh;
+                width: 40vw;
+
+                z-index: 9;
+            }
+        }
+    
+        .footer {
+            //border: 1px black solid;
+    
+            grid-area: footer;
+        }
+
+
+        /* Small screens */
+        @media only screen and (min-width: 0px) and (max-width: 767px) {
+            //background-color: green;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr 1fr;
+            grid-template-areas: "astronaut"
+                                "text"
+                                "footer";
+            .text {
+                //border: 1px black solid;
+                grid-area: text;
+            
+                display: grid;
+            
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 2fr 1fr;
+                grid-template-areas: "welcome" "name" "descriptors";
+                width: 100%;
+                text-justify: center;
+            
+                .welcome {
+                    //border: 1px black solid;
+                    grid-area: welcome;
+            
+
+                    justify-self: center;
+            
+                    font-size: 30px;
+                }
+            
+                .name  {
+                    //border: 1px black solid;
+                    grid-area: name;
+            
+                    justify-self: center;
+                    align-self: center;
+
+                    .name-img {
+                        width: 60vw;
+                        padding: 20px;
+                    }
+                }
+            
+                .descriptors {
+                    grid-area: descriptors;
+            
+                    justify-self: center;
+                    text-justify: center;
+                    align-self: start;
+                    
+                    font-size: 18px;
+                }
+            
+            
+            }
+        
+            .astronaut {
+                //border: 1px black solid;
+                grid-area: astronaut;
+                //align-self: center;
+                justify-self: center;
+
+                .astro-img {
+                    position: relative;
+                    left: 0vw;
+                    top: 1vh;
+                    width: 60vw;
+
+                    z-index: 9;
+                }
+            }
+        
+            .footer {
+                //border: 1px black solid;
+        
+                grid-area: footer;
+            }
+        }
+
+        /* Medium screens */
+        @media only screen and (min-width: 768px) and (max-width: 1123px) {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "astronaut text"
+                                ". footer";
+            .text {
+                //border: 1px black solid;
+                grid-area: text;
+            
+                display: grid;
+            
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 2fr 1fr;
+                grid-template-areas: "welcome" "name" "descriptors";
+            
+                .welcome {
+                    //border: 1px black solid;
+                    grid-area: welcome;
+            
+                    justify-self: center;
+                    align-self: end;
+            
+                    font-size: 25px;
+                }
+            
+                .name  {
+                    //border: 1px black solid;
+                    grid-area: name;
+            
+                    justify-self: center;
+                    align-self: center;
+
+                    .name-img {
+                        width: 25vw;
+                        padding: 0;
+                    }
+                }
+            
+                .descriptors {
+                    //border: 1px black solid;
+                    grid-area: descriptors;
+            
+                    justify-self: center;
+                    align-self: start;
+                    
+                    font-size: 18px;
+                }
+            
+            
+            }
+        
+            .astronaut {
+                //border: 1px black solid;
+                grid-area: astronaut;
+
+                justify-self: end;
+
+                .astro-img {
+                    position: absolute;
+                    left: 5vw;
+                    top: 5vh;
+                    width: 40vw;
+
+                    z-index: 9;
+                }
+            }
+        
+            .footer {
+                //border: 1px black solid;
+        
+                grid-area: footer;
+            }
+        }
+        
+        /* Big screens */
+        @media only screen and (min-width: 1124px) {
+
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 5fr 1fr;
+            grid-template-areas: "astronaut text"
+                                ". footer";
+            .text {
+                //border: 1px black solid;
+                grid-area: text;
+            
+                display: grid;
+            
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 2fr 1fr;
+                grid-template-areas: "welcome" "name" "descriptors";
+            
+                .welcome {
+                    //border: 1px black solid;
+                    grid-area: welcome;
+            
+                    justify-self: center;
+                    align-self: end;
+            
+                    font-size: 40px;
+                }
+            
+                .name  {
+                    //border: 1px black solid;
+                    grid-area: name;
+            
+                    justify-self: center;
+                    align-self: center;
+
+                    .name-img {
+                        width: 30vw;
+                        padding: 20px;
+                    }
+                }
+            
+                .descriptors {
+                    //border: 1px black solid;
+                    grid-area: descriptors;
+            
+                    justify-self: center;
+                    align-self: start;
+                    
+                    font-size: 24px;
+                }
+            
+            
+            }
+        
+            .astronaut {
+                //border: 1px black solid;
+                grid-area: astronaut;
+
+                justify-self: end;
+
+                .astro-img {
+                    position: absolute;
+                    left: 5vw;
+                    top: 5vh;
+                    width: 40vw;
+
+                    z-index: 9;
+                }
+            }
+        
+            .footer {
+                //border: 1px black solid;
+        
+                grid-area: footer;
+            }
+        }
+    }
+}

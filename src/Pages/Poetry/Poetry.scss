@@ -1,0 +1,156 @@
+.poetry-container {
+  padding: 20px 20px;
+  //background-color: white;
+  //height: 1000px;
+  .poetry-masonry {
+    transition: all .5s ease-in-out;
+    column-gap: 30px;
+    column-fill: initial;
+    //background-color: white;
+
+    .poetry-brick {
+      margin-bottom: 30px;
+      display: inline-block; /* Fix the misalignment of items */
+      vertical-align: top; /* Keep the item on the very top */
+      box-sizing: inherit;
+      //overflow: hidden;
+      // display: grid;
+      // grid-template-columns: 1fr;
+      // grid-template-rows: 3fr 1fr;
+      // grid-template-areas: "image" "description";
+      background-color: white;
+
+      img {
+          // grid-area: "image";
+        transition: all .5s ease-in-out;
+        backface-visibility: hidden; /* Remove Image flickering on hover */
+        max-width:100%;
+        vertical-align: middle;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        //width: 400px;
+        //height: auto;
+
+        &:hover {
+          opacity: .75;
+        }
+      }
+      .poetry-description {
+        position: relative;
+        bottom: 100px;
+        margin-bottom: -100px;
+        left: 0;
+        z-index: 1;     
+        background-color: white;      
+        transition: .2s ease-in-out;
+        //height: 80px;
+        //width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        text-justify: center;
+        padding: 20px;
+  
+        color: gray;
+        font-size: 16px;
+        font-family: 'Source Sans Pro';
+        //text-transform: uppercase;
+      }
+    }
+  }
+
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .poetry-container {
+padding: 0 20px;
+//background-color: white;
+.poetry-masonry {
+  transition: all .5s ease-in-out;
+  column-gap: 30px;
+  column-fill: initial;
+  //column-gap: 50px;
+
+  .poetry-brick {
+    margin-bottom: 30px;
+    display: inline-block; /* Fix the misalignment of items */
+    vertical-align: top; /* Keep the item on the very top */
+    box-sizing: inherit;
+    //overflow: hidden;
+
+    img {
+      transition: all .5s ease-in-out;
+      backface-visibility: hidden; /* Remove Image flickering on hover */
+      max-width:100%;
+      vertical-align: middle;
+      border-radius: 20px;
+      width: 400px;
+      height: 200px;
+
+      &:hover {
+        opacity: .75;
+      }
+    }
+
+    .poetry-description {
+      position: relative;
+      bottom: 50%;
+      left: 0;
+      z-index: 1;     
+      background-color: white;      
+      transition: .2s ease-in-out;
+      height: 80px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      text-justify: center;
+      padding: 20px;
+
+      color: gray;
+      font-size: 16px;
+      font-family: 'Raleway';
+      text-transform: uppercase;
+    }
+
+    // .description {
+    //   color: gray;
+    //   font-size: 16px;
+    //   font-family: 'Raleway';
+    //   text-transform: uppercase;
+    //   background-color: white;
+    // }
+      
+  }
+}
+
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+.poetry-masonry {
+  column-count: 2;
+}
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+
+.poetry-masonry {
+  column-count: 3;
+}
+}
+
+} .poetry-masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+
+  .poetry-masonry {
+    column-count: 3;
+  }
+}
+
+  }
